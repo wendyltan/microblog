@@ -1,5 +1,43 @@
-2018-02-18 16:17:53,517 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
-2018-02-18 16:43:40,170 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
-2018-02-18 16:43:47,597 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
-2018-02-18 17:09:22,955 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
-2018-02-18 17:18:58,905 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
+2018-02-19 21:28:42,283 ERROR: Exception on /index [GET] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 21, in index
+    posts = current_user.followed_post().all()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_post'
+2018-02-19 21:28:42,965 ERROR: Exception on /index [GET] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 21, in index
+    posts = current_user.followed_post().all()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_post'
+2018-02-19 21:29:25,145 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
