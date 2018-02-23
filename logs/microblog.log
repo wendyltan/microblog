@@ -1,4 +1,4 @@
-2018-02-19 21:28:42,283 ERROR: Exception on /index [GET] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
+2018-02-23 12:46:51,311 ERROR: Exception on /reset_password_request [POST] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,14 +12,30 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 21, in index
-    posts = current_user.followed_post().all()
-  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2018-02-19 21:28:42,965 ERROR: Exception on /index [GET] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 161, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\Wendy\Desktop\microblog\application\email.py", line 26, in send_password_reset_email
+    user=user, token=token))
+  File "C:\Users\Wendy\Desktop\microblog\application\email.py", line 16, in send_email
+    mail.send(msg)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "D:\python35\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "D:\python35\lib\smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "D:\python35\lib\smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "D:\python35\lib\socket.py", line 711, in create_connection
+    raise err
+  File "D:\python35\lib\socket.py", line 702, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2018-02-23 12:47:00,491 ERROR: Exception on /reset_password_request [POST] [in c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -33,11 +49,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 21, in index
-    posts = current_user.followed_post().all()
-  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2018-02-19 21:29:25,145 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:48]
+  File "C:\Users\Wendy\Desktop\microblog\application\routes.py", line 161, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\Wendy\Desktop\microblog\application\email.py", line 26, in send_password_reset_email
+    user=user, token=token))
+  File "C:\Users\Wendy\Desktop\microblog\application\email.py", line 16, in send_email
+    mail.send(msg)
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\users\wendy\desktop\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "D:\python35\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "D:\python35\lib\smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "D:\python35\lib\smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "D:\python35\lib\socket.py", line 711, in create_connection
+    raise err
+  File "D:\python35\lib\socket.py", line 702, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2018-02-23 12:47:37,454 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:51]
+2018-02-23 12:55:17,548 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:51]
