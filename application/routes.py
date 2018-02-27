@@ -9,7 +9,6 @@ from application.forms import LoginForm, RegistrationForm, EditProfileForm, Post
     ResetPasswordForm
 from datetime import datetime
 
-
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
