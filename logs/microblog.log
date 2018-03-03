@@ -78,3 +78,5 @@ ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
 2018-02-24 20:52:28,892 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:54]
 2018-02-24 20:58:14,683 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:54]
 2018-02-24 21:05:07,729 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:54]
+2018-03-04 00:21:38,049 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:60]
+2018-03-04 00:21:49,669 INFO: Microblog startup [in C:\Users\Wendy\Desktop\microblog\application\__init__.py:60]
